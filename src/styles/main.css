@@ -10,3 +10,7 @@ body{
     background-color: #282e34;
     color: beige;
 }
+/* Styles for header */
+.mainHeader{
+    font-size: 24px;
+}
