@@ -1,0 +1,12 @@
+/* Basic styles */
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    background-color: #282e34;
+    color: beige;
+}
