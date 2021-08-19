@@ -56,3 +56,21 @@ body{
     padding: 5px 0;
     border-bottom: 2px solid #1c2024;
 }
+
+/* Some rwd */
+@media (min-width: 828px) {
+    /* Styles for header */
+    .mainHeader{
+        font-size: 32px;
+    }
+    /* Styles related with calendar */
+    .calendar__monthContainer{
+        height: 400px;
+    }
+}
+@media (min-width: 1024px) {
+    /* Styles related with calendar */
+    .calendar__monthContainer{
+        height: 500px;
+    }
+}
