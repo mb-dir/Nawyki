@@ -24,3 +24,15 @@ function isTheSameYear(){
         return false;
     }
 }
+
+function clearIfItIsDiffrentYear(inputsToClear){
+    //Handling year info when it is 1st app run
+    setYearWhen1stAppRun();
+    if(!isTheSameYear()){
+        for(const input of inputsToClear){
+            //Here will be code responsible for reseting the inputs, but I am not able to write it now, cuz I do not write code responsible for handling input state(whether it was checked or not) and I do not know which classes this function has to remove from each input
+        }
+    }
+}
+
+export default clearIfItIsDiffrentYear;
