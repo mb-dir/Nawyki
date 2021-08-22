@@ -11,3 +11,16 @@ function setYearWhen1stAppRun(){
         window.localStorage.setItem("year", year);
     }
 }
+
+function isTheSameYear(){
+    const yearFromStorge = parseInt(window.localStorage.getItem("year"));
+    const currentYear = new Date().getFullYear();
+
+    if(yearFromStorge === currentYear){
+        return true;
+    }else{
+        //If there is a new year the app has to update the "year" in storage
+        window.localStorage.setItem("year", currentYear);
+        return false;
+    }
+}
