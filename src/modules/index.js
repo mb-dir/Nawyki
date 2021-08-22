@@ -13,9 +13,6 @@ import clearIfItIsDiffrentYear from "./new_year_reset/newYearReset";
 const febReference = document.querySelector("#febuary");
 const febLeapYear = document.querySelector("#febLeapYear");
 
-const monthInputs = document.querySelectorAll(".calendar__input");
-
 //functions
 leapYearExtraDay(febReference, febLeapYear);
-
-clearIfItIsDiffrentYear(monthInputs);
+clearIfItIsDiffrentYear();
