@@ -7,10 +7,15 @@ import "../styles/main.css";
 
 //modules import
 import leapYearExtraDay from "./feb_leap_year/febLeapYear";
+import clearIfItIsDiffrentYear from "./new_year_reset/newYearReset";
 
 //dom variables
 const febReference = document.querySelector("#febuary");
 const febLeapYear = document.querySelector("#febLeapYear");
 
+const monthInputs = document.querySelectorAll(".calendar__input");
+
 //functions
 leapYearExtraDay(febReference, febLeapYear);
+
+clearIfItIsDiffrentYear(monthInputs);
