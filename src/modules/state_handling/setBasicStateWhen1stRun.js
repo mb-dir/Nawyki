@@ -8,7 +8,7 @@ function setBasicStateWhen1stRun(){
         for(let i = 0; i <= 366; i++){
             arrayOfInputsState[i] = 0;//0 cuz each input is not check by default
         }
-        window.localStorage.setItem("inputsState", arrayOfInputsState);
+        window.localStorage.setItem("inputsState", JSON.stringify(arrayOfInputsState));
     }
 }
 
