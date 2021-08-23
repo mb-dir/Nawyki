@@ -17,6 +17,16 @@ function updateInputsState(){
     const inputsFromPage = document.querySelectorAll(".calendar__input");
     const currentYearDay = getCurrentDayOfYear();
 
+    //Inputs represent not today have diffrent styles in order to show user that they are disabled
+    inputsFromPage.forEach((input, inputIndex)=>{
+        if(inputIndex === currentYearDay){
+            return;
+        }else{
+            //Reference to parent element, look DOM (input has "calendar__input" class)
+            input.parentElement.classList.add("calendar__day--blank");
+        }
+    });
+
     //When user clicks the input this code recognize if this input status === 0 or === 1 and change this status to the appropriate one(0 mieans unchecked, 1 mean checked)
 
     //Handling for input represents current day(this input is clickable, and will call the inputState change in storage)
