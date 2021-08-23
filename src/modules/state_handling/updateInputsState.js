@@ -15,17 +15,30 @@ function getCurrentDayOfYear(){//https://stackoverflow.com/questions/8619879/jav
 function updateInputsState(){
     const arrayOfInputsState = JSON.parse(window.localStorage.getItem("inputsState"));
     const inputsFromPage = document.querySelectorAll(".calendar__input");
+    const currentYearDay = getCurrentDayOfYear();
 
     //When user clicks the input this code recognize if this input status === 0 or === 1 and change this status to the appropriate one(0 mieans unchecked, 1 mean checked)
+
+    //Handling for input represents current day(this input is clickable, and will call the inputState change in storage)
+    inputsFromPage[currentYearDay].addEventListener("click",()=>{
+        if(arrayOfInputsState[currentYearDay] === 0){
+            arrayOfInputsState[currentYearDay] = 1;
+        }else{
+            arrayOfInputsState[currentYearDay] = 0;
+        }
+        //Set new array to local storage
+        window.localStorage.setItem("inputsState", JSON.stringify(arrayOfInputsState));
+    });
+
+    //Handling for the inputs which represent not current day, the user will get information about not allowed operation
     inputsFromPage.forEach((input, inputIndex)=>{
-        input.addEventListener("click", ()=>{
-            if(arrayOfInputsState[inputIndex] === 0){
-                arrayOfInputsState[inputIndex] = 1;
+        input.addEventListener("click", (e)=>{
+            if(inputIndex === currentYearDay){
+                return;
             }else{
-                arrayOfInputsState[inputIndex] = 0;
-            }
-            //Set new array to local storage
-            window.localStorage.setItem("inputsState", JSON.stringify(arrayOfInputsState));
+                alert("You cannot check the input for not today");
+                e.preventDefault();
+           }
         });
     });
 }
