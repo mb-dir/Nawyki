@@ -9,6 +9,7 @@ import "../styles/main.css";
 import leapYearExtraDay from "./feb_leap_year/febLeapYear";
 import clearIfItIsDiffrentYear from "./new_year_reset/newYearReset";
 import setBasicStateWhen1stRun from "./state_handling/setBasicStateWhen1stRun";
+import updateInputsState from "./state_handling/updateInputsState";
 
 //dom variables
 const febReference = document.querySelector("#febuary");
@@ -18,3 +19,4 @@ const febLeapYear = document.querySelector("#febLeapYear");
 leapYearExtraDay(febReference, febLeapYear);
 clearIfItIsDiffrentYear();
 setBasicStateWhen1stRun();
+updateInputsState();
