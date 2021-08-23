@@ -98,3 +98,9 @@ body::-webkit-scrollbar-thumb {
         height: 500px;
     }
 }
+
+/* Classes add in JS */
+
+.calendar__day--blank {
+    background-color: #aaaaaa4d;
+}
