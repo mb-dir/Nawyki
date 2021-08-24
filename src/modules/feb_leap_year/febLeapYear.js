@@ -2,6 +2,7 @@
 
 function leapYearExtraDay(){
     const year = new Date().getFullYear();
+    //Reference to elements which will get a new value(when it is leap year ofc)
     const febMonthElement = document.querySelector("#febuary");
     const febLeapYearDays = document.querySelector("#febLeapYear");
     if(year%4 === 0){

@@ -1,5 +1,6 @@
 //This module is responsible for updating inputs status
 
+//Import an auxiliary function which returnes current day of year
 import getCurrentDayOfYear from "../auxiliary_functions/getCurrentDayOfYear";
 
 function updateInputsState(){
@@ -7,7 +8,7 @@ function updateInputsState(){
     const inputsFromPage = document.querySelectorAll(".calendar__input");
     const currentYearDay = getCurrentDayOfYear();
 
-    //When user clicks the input this code recognize if this input status === 0 or === 1 and change this status to the appropriate one(0 mieans unchecked, 1 mean checked)
+    //When user clicks the input this code recognize if this input status === 0 or === 1 and change this status to the appropriate one(0 means unchecked, 1 means checked)
 
     //Handling for input represents current day(this input is clickable, and will call the inputState change in storage)
     inputsFromPage[currentYearDay].addEventListener("click",()=>{

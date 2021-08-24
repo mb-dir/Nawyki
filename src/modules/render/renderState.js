@@ -1,3 +1,6 @@
+//This module is responsible for showing informations from localstorage
+
+//Import an auxiliary function which returnes current day of year
 import getCurrentDayOfYear from "../auxiliary_functions/getCurrentDayOfYear";
 
 function renderInputs(){
