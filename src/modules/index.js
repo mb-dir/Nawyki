@@ -7,9 +7,9 @@ import "../styles/main.css";
 
 //modules import
 import setYearWhen1stAppRun from "./1st_app_run/setYear";
+import setBasicStateWhen1stRun from "./1st_app_run/setBasicStateWhen1stRun";
 import leapYearExtraDay from "./feb_leap_year/febLeapYear";
 import clearIfItIsDiffrentYear from "./new_year_reset/newYearReset";
-import setBasicStateWhen1stRun from "./1st_app_run/setBasicStateWhen1stRun";
 import updateInputsState from "./state_handling/updateInputsState";
 import renderInputs from "./render/renderState";
 
