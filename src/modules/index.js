@@ -13,14 +13,11 @@ import clearIfItIsDiffrentYear from "./new_year_reset/newYearReset";
 import updateInputsState from "./state_handling/updateInputsState";
 import renderInputs from "./render/renderState";
 
-//dom variables
-const febReference = document.querySelector("#febuary");
-const febLeapYear = document.querySelector("#febLeapYear");
 
 //functions
 setYearWhen1stAppRun();
 setBasicStateWhen1stRun();
-leapYearExtraDay(febReference, febLeapYear);
+leapYearExtraDay();
 clearIfItIsDiffrentYear();
 updateInputsState();
 renderInputs();
