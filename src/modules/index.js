@@ -6,19 +6,18 @@ import regeneratorRuntime from "regenerator-runtime";
 import "../styles/main.css";
 
 //modules import
+import setYearWhen1stAppRun from "./1st_app_run/setYear";
+import setBasicStateWhen1stRun from "./1st_app_run/setBasicStateWhen1stRun";
 import leapYearExtraDay from "./feb_leap_year/febLeapYear";
 import clearIfItIsDiffrentYear from "./new_year_reset/newYearReset";
-import setBasicStateWhen1stRun from "./state_handling/setBasicStateWhen1stRun";
 import updateInputsState from "./state_handling/updateInputsState";
 import renderInputs from "./render/renderState";
 
-//dom variables
-const febReference = document.querySelector("#febuary");
-const febLeapYear = document.querySelector("#febLeapYear");
 
 //functions
-leapYearExtraDay(febReference, febLeapYear);
-clearIfItIsDiffrentYear();
+setYearWhen1stAppRun();
 setBasicStateWhen1stRun();
+leapYearExtraDay();
+clearIfItIsDiffrentYear();
 updateInputsState();
 renderInputs();
