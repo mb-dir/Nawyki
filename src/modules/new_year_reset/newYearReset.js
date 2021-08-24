@@ -1,3 +1,4 @@
+//An auxiliary function which helps to define if the year value from storage(which sets "setYear" from 1stAppRun) is still current
 function isTheSameYear(){
     const yearFromStorge = parseInt(window.localStorage.getItem("year"));
     const currentYear = new Date().getFullYear();
