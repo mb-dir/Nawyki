@@ -6,6 +6,7 @@ import regeneratorRuntime from "regenerator-runtime";
 import "../styles/main.css";
 
 //modules import
+import setYearWhen1stAppRun from "./1stAppRun/setYear";
 import leapYearExtraDay from "./feb_leap_year/febLeapYear";
 import clearIfItIsDiffrentYear from "./new_year_reset/newYearReset";
 import setBasicStateWhen1stRun from "./state_handling/setBasicStateWhen1stRun";
@@ -17,6 +18,7 @@ const febReference = document.querySelector("#febuary");
 const febLeapYear = document.querySelector("#febLeapYear");
 
 //functions
+setYearWhen1stAppRun();
 leapYearExtraDay(febReference, febLeapYear);
 clearIfItIsDiffrentYear();
 setBasicStateWhen1stRun();
