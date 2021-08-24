@@ -104,3 +104,11 @@ body::-webkit-scrollbar-thumb {
 .calendar__day--blank {
     background-color: #aaaaaa4d;
 }
+
+.calendar__day--unchecked{
+    color: #fd7678;
+}
+
+.calendar__day--checked{
+    color: #05d305;
+}

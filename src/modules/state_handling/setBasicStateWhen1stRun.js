@@ -4,8 +4,14 @@ function setBasicStateWhen1stRun(){
     const inputsState = !!window.localStorage.getItem("inputsState");
     if(!inputsState){
         const arrayOfInputsState = [];
-        //<= 366 cuz I want to have one extra index for 29th of febuary
-        for(let i = 0; i <= 366; i++){
+
+        //"Push" as many value as there are days in the year, so if it is leap year push one more value
+        let len = 365;
+        const year = new Date().getFullYear();
+        if(year % 4 === 0){
+            len = 366;
+        }
+        for(let i = 0; i <= len; i++){
             arrayOfInputsState[i] = 0;//0 cuz each input is not check by default
         }
         window.localStorage.setItem("inputsState", JSON.stringify(arrayOfInputsState));
