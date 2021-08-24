@@ -3,7 +3,7 @@
 //Import an auxiliary function which returnes current day of year
 import getCurrentDayOfYear from "../auxiliary_functions/getCurrentDayOfYear";
 //Function which show amout of done habit in month, it will be called each time user changes the input checked value, in consequence the user always has real amout of done habit
-import showNumberOfCheckedInputs from "../show_number_of_checked_inputs/t";
+import showNumberOfCheckedInputs from "../show_number_of_checked_inputs/numberOfDoneHabit";
 
 function updateInputsState(){
     const arrayOfInputsState = JSON.parse(window.localStorage.getItem("inputsState"));
