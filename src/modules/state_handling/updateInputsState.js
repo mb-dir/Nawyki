@@ -2,6 +2,7 @@
 
 //Import an auxiliary function which returnes current day of year
 import getCurrentDayOfYear from "../auxiliary_functions/getCurrentDayOfYear";
+import showNumberOfCheckedInputs from "../show_number_of_checked_inputs/t"
 
 function updateInputsState(){
     const arrayOfInputsState = JSON.parse(window.localStorage.getItem("inputsState"));
@@ -12,6 +13,7 @@ function updateInputsState(){
 
     //Handling for input represents current day(this input is clickable, and will call the inputState change in storage)
     inputsFromPage[currentYearDay].addEventListener("click",()=>{
+        showNumberOfCheckedInputs();
         if(arrayOfInputsState[currentYearDay] === 0){
             arrayOfInputsState[currentYearDay] = 1;
         }else{
