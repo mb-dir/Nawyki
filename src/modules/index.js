@@ -9,7 +9,7 @@ import "../styles/main.css";
 import setYearWhen1stAppRun from "./1stAppRun/setYear";
 import leapYearExtraDay from "./feb_leap_year/febLeapYear";
 import clearIfItIsDiffrentYear from "./new_year_reset/newYearReset";
-import setBasicStateWhen1stRun from "./state_handling/setBasicStateWhen1stRun";
+import setBasicStateWhen1stRun from "./1stAppRun/setBasicStateWhen1stRun";
 import updateInputsState from "./state_handling/updateInputsState";
 import renderInputs from "./render/renderState";
 
@@ -19,8 +19,8 @@ const febLeapYear = document.querySelector("#febLeapYear");
 
 //functions
 setYearWhen1stAppRun();
+setBasicStateWhen1stRun();
 leapYearExtraDay(febReference, febLeapYear);
 clearIfItIsDiffrentYear();
-setBasicStateWhen1stRun();
 updateInputsState();
 renderInputs();
