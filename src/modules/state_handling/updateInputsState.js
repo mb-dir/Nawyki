@@ -18,8 +18,16 @@ function updateInputsState(){
         showNumberOfCheckedInputs();
         if(arrayOfInputsState[currentYearDay] === 0){
             arrayOfInputsState[currentYearDay] = 1;
+
+            //Dynamically class change, after user clicks the input
+            inputsFromPage[currentYearDay].parentElement.classList.remove("calendar__day--unchecked");
+            inputsFromPage[currentYearDay].parentElement.classList.add("calendar__day--checked");
         }else{
             arrayOfInputsState[currentYearDay] = 0;
+            
+            //Dynamically class change, after user clicks the input
+            inputsFromPage[currentYearDay].parentElement.classList.remove("calendar__day--checked");
+            inputsFromPage[currentYearDay].parentElement.classList.add("calendar__day--unchecked");
         }
         //Set new array to local storage
         window.localStorage.setItem("inputsState", JSON.stringify(arrayOfInputsState));
