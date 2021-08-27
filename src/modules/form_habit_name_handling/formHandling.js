@@ -4,7 +4,7 @@ function formHandling(){
 
     form.addEventListener("change", ({target})=>{
         const habitName = target.value;
-        console.log(habitName);
+        window.localStorage.setItem("habitName", habitName);
     })
 }
 
