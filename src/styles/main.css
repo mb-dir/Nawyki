@@ -25,6 +25,30 @@ body::-webkit-scrollbar-thumb {
 .mainHeader{
     font-size: 24px;
 }
+/* Form related with habit name styles */
+.setHabit{
+    margin: 10px 0;
+}
+.setHabit__label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+.setHabit__input{
+    font-size: 18px;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    background-color: #282e34;
+    color: beige;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #1c2024;
+}
+.setHabit__input:focus{
+    border-bottom: 3px solid #fd7678;
+}
+
 /* Styles related with calendar */
 .calendar{
     display: flex;
