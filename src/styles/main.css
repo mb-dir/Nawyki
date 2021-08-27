@@ -29,7 +29,10 @@ body::-webkit-scrollbar-thumb {
 .setHabit{
     margin: 10px 0;
 }
-
+.setHabit__label{
+    display: block;
+    margin-bottom: 5px;
+}
 
 /* Styles related with calendar */
 .calendar{
