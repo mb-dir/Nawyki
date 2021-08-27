@@ -25,6 +25,12 @@ body::-webkit-scrollbar-thumb {
 .mainHeader{
     font-size: 24px;
 }
+/* Form related with habit name styles */
+.setHabit{
+    margin: 10px 0;
+}
+
+
 /* Styles related with calendar */
 .calendar{
     display: flex;
