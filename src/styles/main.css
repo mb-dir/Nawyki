@@ -32,6 +32,7 @@ body::-webkit-scrollbar-thumb {
 .setHabit__label{
     display: block;
     margin-bottom: 5px;
+    font-size: 30px;
 }
 .setHabit__input{
     font-size: 18px;
