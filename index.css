@@ -1,0 +1,139 @@
+/* Basic styles */
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    background-color: #282e34;
+    color: beige;
+}
+/* Scrollbar styles */
+body::-webkit-scrollbar {
+    width: 1em;
+}  
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}  
+body::-webkit-scrollbar-thumb {
+    background-color: beige;
+    outline: 1px solid slategrey;
+}
+/* Styles for header */
+.mainHeader{
+    font-size: 24px;
+}
+/* Form related with habit name styles */
+.setHabit{
+    margin: 10px 0;
+}
+.setHabit__label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+.setHabit__input{
+    font-size: 18px;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    background-color: #282e34;
+    color: beige;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #1c2024;
+}
+.setHabit__input:focus{
+    border-bottom: 3px solid #fd7678;
+}
+
+/* Styles related with calendar */
+.calendar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.calendar__monthContainer{
+    width: 40%;
+    height: 200px;
+    margin: 10px;
+    overflow-y: scroll;
+    border: 4px solid #1c2024;
+}
+/* Scrollbar styles */
+.calendar__monthContainer::-webkit-scrollbar {
+    width: 1em;
+}
+.calendar__monthContainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.calendar__monthContainer::-webkit-scrollbar-thumb {
+    background-color: beige;
+    outline: 1px solid slategrey;
+}
+
+
+.calendar__header{
+    background-color: #1c2024;
+    color: #fd7678;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 2px;
+}
+.calendar__monthName{
+    font-size: 20px;
+}
+.calendar__monthName, .calendar__userActive{
+    margin: 0;
+    padding: 2px 8px;
+}
+.calendar__month{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.calendar__day{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    border-bottom: 2px solid #1c2024;
+}
+
+/* Some rwd */
+@media (min-width: 828px) {
+    /* Styles for header */
+    .mainHeader{
+        font-size: 32px;
+    }
+    /* Styles related with calendar */
+    .calendar__monthContainer{
+        height: 400px;
+    }
+}
+@media (min-width: 1024px) {
+    /* Styles related with calendar */
+    .calendar__monthContainer{
+        height: 500px;
+    }
+}
+
+/* Classes add in JS */
+
+.calendar__day--blank {
+    background-color: #aaaaaa4d;
+}
+
+.calendar__day--unchecked{
+    color: #fd7678;
+}
+
+.calendar__day--checked{
+    color: #05d305;
+}
