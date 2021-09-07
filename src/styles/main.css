@@ -145,6 +145,14 @@ body::-webkit-scrollbar-thumb {
         height: 500px;
     }
 }
+/* Animations */
+@keyframes showModal{
+    25%, 90%{
+      transform: translate(-50%, 0);
+    }100%{
+      transform: translate(-50%, -150%);
+    }
+  }
 
 /* Classes add in JS */
 
@@ -158,4 +166,9 @@ body::-webkit-scrollbar-thumb {
 
 .calendar__day--checked{
     color: #05d305;
+}
+
+.alertModal--appear{
+    display: block;
+    animation: showModal 6s 1;
 }
