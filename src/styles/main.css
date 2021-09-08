@@ -10,6 +10,29 @@ body{
     background-color: #282e34;
     color: beige;
 }
+/* Alert modal */
+.alertModal{
+    height: 130px;
+    width: 300px;
+    padding: 10px;
+    background-color: #282e34;
+    border: 3px solid #fd7678;
+    border-radius: 5px;
+    font-size: 20px;
+    /* Flex in order to the indside text was in the center of container */
+    display: flex;
+    align-items: center;
+    /* It must be fixed to the modal appears correctly even when the user is at the bottom of the page */
+    position: fixed;
+    left: 50%;
+    /* Set the element "off" the page */
+    transform: translate(-50%, -150%);
+    /* Modal must be above the other elements */
+    z-index: 999;
+    /* Initially, the modal is hidden */
+    display: none;
+}
+
 /* Scrollbar styles */
 body::-webkit-scrollbar {
     width: 1em;
@@ -122,6 +145,14 @@ body::-webkit-scrollbar-thumb {
         height: 500px;
     }
 }
+/* Animations */
+@keyframes showModal{
+    25%, 90%{
+      transform: translate(-50%, 0);
+    }100%{
+      transform: translate(-50%, -150%);
+    }
+  }
 
 /* Classes add in JS */
 
@@ -135,4 +166,9 @@ body::-webkit-scrollbar-thumb {
 
 .calendar__day--checked{
     color: #05d305;
+}
+
+.alertModal--appear{
+    display: block;
+    animation: showModal 6s 1;
 }

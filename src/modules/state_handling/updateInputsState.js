@@ -4,6 +4,8 @@
 import getCurrentDayOfYear from "../auxiliary_functions/getCurrentDayOfYear";
 //Function which show amout of done habit in month, it will be called each time user changes the input checked value, in consequence the user always has real amout of done habit
 import showNumberOfCheckedInputs from "../show_number_of_checked_inputs/numberOfDoneHabit";
+// Import function which shows an appropriate alert when user tries to checks "not today" input
+import showModal from "./showAlert";
 
 function updateInputsState(){
     const arrayOfInputsState = JSON.parse(window.localStorage.getItem("inputsState"));
@@ -43,7 +45,8 @@ function updateInputsState(){
             if(inputIndex === currentYearDay){
                 return;
             }else{
-                alert("You cannot check the input for not today");
+                // Modal informates about attempted forbidden operation(check the input for not today)
+                showModal();
                 e.preventDefault();
            }
         });
