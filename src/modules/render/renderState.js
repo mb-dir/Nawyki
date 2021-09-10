@@ -6,9 +6,12 @@ import app from "../firebase";
 //Import an auxiliary function which returnes current day of year
 import getCurrentDayOfYear from "../auxiliary_functions/getCurrentDayOfYear";
 
+//Function which show amout of done habit in month, it will be called at the end of the rendering function to show the number of done habits
+import showNumberOfCheckedInputs from "../show_number_of_checked_inputs/numberOfDoneHabit";
+
 function renderInputs(){
     const arrayOfHabitsRef = app.database().ref("arrayOfHabits");
-    
+
     //The entire rendering process is supposed to happen as soon as the array value is retrieved from firebase
     //Doc - https://firebase.google.com/docs/reference/js/v8/firebase.database.Reference#once
     arrayOfHabitsRef.once("value", (data)=>{
@@ -39,6 +42,8 @@ function renderInputs(){
                 inputsFromPage[i].parentElement.classList.add("calendar__day--unchecked");
             }
         }
+        //Call the function showing amount of done habits, due to the specificity of this function(showNumberOfCheckedInputs), it must be called after updating the DOM - this function gets the reference to all inputs, and checks if disabled === true/false and on the basis of this it counts the number of done habits
+        showNumberOfCheckedInputs();
     }, ()=>{
         console.log("Error: " + error.code);
     });
