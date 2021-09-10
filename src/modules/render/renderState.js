@@ -7,11 +7,12 @@ import app from "../firebase";
 import getCurrentDayOfYear from "../auxiliary_functions/getCurrentDayOfYear";
 
 function renderInputs(){
-    //Checks if there is such an item
-    const inputsState = !!window.localStorage.getItem("inputsState");
-    if(inputsState){
-        //Get a state array from storage
-        const arrayOfInputsState = JSON.parse(window.localStorage.getItem("inputsState"));
+    const arrayOfHabitsRef = app.database().ref("arrayOfHabits");
+    
+    //The entire rendering process is supposed to happen as soon as the array value is retrieved from firebase
+    //Doc - https://firebase.google.com/docs/reference/js/v8/firebase.database.Reference#once
+    arrayOfHabitsRef.once("value", (data)=>{
+        const arrayOfInputsState = data.val();
         //Get all inputs from page
         const inputsFromPage = document.querySelectorAll(".calendar__input");
         //This vatiable keeps information about current day of a year, ex if it is 2nd of jan it equals to 1, cuz I use this value in loops with arrays, and index of array starts form 0, look getCurrentDayOfYear function
@@ -38,7 +39,9 @@ function renderInputs(){
                 inputsFromPage[i].parentElement.classList.add("calendar__day--unchecked");
             }
         }
-    }
+    }, ()=>{
+        console.log("Error: " + error.code);
+    });
 }
 
 export default renderInputs;
