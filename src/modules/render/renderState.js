@@ -32,7 +32,7 @@ function renderInputs(){
             }
         });
         
-        //Loop throught all values from localstorage which represent the past days(thanks to this this function will not add an appropriate class to these inputs which are future and which user was not able to checked), if this value equals to 1 that means this day is "checked"
+        //Loop throught all values from firebase DB which represent the past days(thanks to this this function will not add an appropriate class to these inputs which are future and which user was not able to checked), if this value equals to 1 that means this day is "checked"
         for(let i = 0; i <= howMuchDaysPassed; i++){
             const value = arrayOfInputsState[i];
             if(value === 1){
