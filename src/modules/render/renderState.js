@@ -1,5 +1,8 @@
 //This module is responsible for showing informations from localstorage
 
+//Import firebase(this is file with firebase config)
+import app from "../firebase";
+
 //Import an auxiliary function which returnes current day of year
 import getCurrentDayOfYear from "../auxiliary_functions/getCurrentDayOfYear";
 
