@@ -1,13 +1,20 @@
 //Module responsible for showing habit name by default
+
+//Import firebase(this is file with firebase config)
+import app from "../firebase";
+
 function showHabitName(){
-    //Ensure there is such an item in storage, if it exists that means it is not 1st time app run, and is storage exists habitName
-    const isHabitName = !!window.localStorage.getItem("habitName");
-    if(isHabitName){
-        //Code responsible for showing habit name by default
-        const habitName = window.localStorage.getItem("habitName");
-        const inputWithHabitName = document.querySelector("#habit");
-        inputWithHabitName.value = habitName;
-    }
+    //Code responsible for showing habit name by default
+    const inputWithHabitName = document.querySelector("#habit");
+    //Get the refference to "habitName" value on firebase
+    const habitNameOnDatabase = app.database().ref("habitName");
+
+    habitNameOnDatabase.on("value", function(data) {
+        //Set the value from firebase as a input value
+        inputWithHabitName.value = data.val();
+    }, function (error) {
+        console.log("Error: " + error.code);
+    });
 }
 
 export default showHabitName;

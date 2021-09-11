@@ -1,3 +1,5 @@
 .history/
 node_modules/
 dist/
+# it's file with firebase config
+src/modules/firebase.js
