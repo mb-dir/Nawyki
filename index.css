@@ -2,6 +2,10 @@
 *,*::before,*::after{
     box-sizing: border-box;
 }
+html{
+    /* Smooth scroll related with months naviagtion - better UX */
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;
@@ -70,6 +74,25 @@ body::-webkit-scrollbar-thumb {
 }
 .setHabit__input:focus{
     border-bottom: 3px solid #fd7678;
+}
+
+/* Nav styles */
+.monthsHooks{
+    margin: 30px 0;
+}
+.monthsHooks__monthsList{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.monthsHooks__month{
+    margin: 8px;
+}
+.monthsHooks__monthHook{
+    color: beige;
+    text-decoration: none;
 }
 
 /* Styles related with calendar */
