@@ -14,6 +14,11 @@ body{
     background-color: #282e34;
     color: beige;
 }
+.link{
+    color: beige;
+    text-decoration: none;
+    font-size: 18px;
+}
 /* Alert modal */
 .alertModal{
     height: 130px;
