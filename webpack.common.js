@@ -30,6 +30,10 @@ module.exports = {
             filename: "index.html",
             template: "./src/pages/index.html",
         }),
+        new HtmlWebpackPlugin({
+            filename: "view.html",
+            template: "./src/pages/view.html",
+        }),
         //You can add here more pages
     ],
 };
