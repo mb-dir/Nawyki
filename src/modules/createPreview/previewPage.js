@@ -1,7 +1,17 @@
 function previewPage(){
-    const app = document.querySelector("#app");
-    //Each time update the localstorage, and based on this localstorage value, the content on view subpage will be generated(the content on this page will be read-only - it cannot be edited)
-    window.localStorage.setItem("content", app.innerHTML);
+    
+    const view = document.querySelector("#view");
+    view.innerHTML = window.localStorage.getItem("content");
+    const link = document.querySelector(".link");
+    //There is no needed to display "Whatch preview" link on preview page
+    link.style.display = "none";
+
+    const calendarInputs = document.querySelectorAll(".calendar__input");
+    //Each input must be disaled in order to user was not able to update the app state from preview page
+    for(const input of calendarInputs){
+        input.disabled = true;
+    }
 }
+    
 
 export default previewPage;
