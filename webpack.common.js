@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
     entry: {
         index: "./src/modules/index.js",
+        preview: "./src/modules/preview.js",
         //You can add here more entrypoints
     },
     output: {
@@ -29,6 +30,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: "./src/pages/index.html",
+            chunks: ["index"],
+        }),
+        new HtmlWebpackPlugin({
+            filename: "view.html",
+            template: "./src/pages/view.html",
+            chunks: ["preview"],
         }),
         //You can add here more pages
     ],

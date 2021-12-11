@@ -4,7 +4,6 @@ import regeneratorRuntime from "regenerator-runtime";
 
 //styles
 import "../styles/main.css";
-
 //modules import
 import setYearWhen1stAppRun from "./1st_app_run/setYear";
 import setBasicStateWhen1stRun from "./1st_app_run/setBasicStateWhen1stRun";
@@ -17,7 +16,6 @@ import formHandling from "./form_habit_name_handling/formHandling";
 import showHabitName from "./form_habit_name_handling/showHabitNameByDefault";
 
 
-//functions
 setYearWhen1stAppRun();
 setBasicStateWhen1stRun();
 leapYearExtraDay();
