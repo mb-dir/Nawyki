@@ -14,6 +14,7 @@ import renderInputs from "./render/renderState";
 import showNumberOfCheckedInputs from "./show_number_of_checked_inputs/numberOfDoneHabit";
 import formHandling from "./form_habit_name_handling/formHandling";
 import showHabitName from "./form_habit_name_handling/showHabitNameByDefault";
+import saveMainAppContent from "./createPreview/saveMainAppContent";
 
 
 setYearWhen1stAppRun();
@@ -25,3 +26,4 @@ renderInputs();
 showNumberOfCheckedInputs();
 formHandling();
 showHabitName();
+saveMainAppContent();
